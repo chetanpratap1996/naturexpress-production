@@ -102,3 +102,10 @@ export interface DDSSubmission {
   referenceNumber: string;
   status: 'Pending' | 'Approved';
 }
+export interface DDSRequestData {
+  companyName: string;
+  hsCode: string; // e.g., '0901' for Coffee
+  countryOfProduction: string; // e.g., 'India'
+  certificationScheme?: string; // e.g., 'Rainforest Alliance'
+  relevantLegislation?: string; // Free text
+}
