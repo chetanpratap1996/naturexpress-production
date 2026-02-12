@@ -103,9 +103,16 @@ export interface DDSSubmission {
   status: 'Pending' | 'Approved';
 }
 export interface DDSRequestData {
-  companyName: string;
-  hsCode: string; // e.g., '0901' for Coffee
-  countryOfProduction: string; // e.g., 'India'
-  certificationScheme?: string; // e.g., 'Rainforest Alliance'
-  relevantLegislation?: string; // Free text
+  companyName: string; // Already exists
+  hsCode: string; // Already exists
+  countryOfProduction: string; // Already exists
+  certificationScheme?: string; // Already exists
+  relevantLegislation?: string; // Already exists
+  
+  // ADD THESE NEW MISSING FIELDS:
+  netMassKg?: number;
+  invoiceNumber?: string;
+  buyerName?: string;
+  buyerAddress?: string;
+  transportMode?: 'Sea' | 'Air' | 'Road' | 'Rail';
 }
